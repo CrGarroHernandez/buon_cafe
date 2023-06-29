@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>@yield('title', 'Buon Café')</title>
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-        {{-- @vite(['resources/css/app.css']) --}}
     </head>
     <body>
         @include('partials.nav')
