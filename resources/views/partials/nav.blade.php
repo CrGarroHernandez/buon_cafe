@@ -6,7 +6,7 @@
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item px-lg-4 {{request()->routeIs('home') ? 'active' : ''}}"><a class="nav-link text-uppercase" href="{{route('home')}}">Inicio</a></li>
                 <li class="nav-item px-lg-4 {{request()->routeIs('about') ? 'active' : ''}}"><a class="nav-link text-uppercase" href="{{route('about')}}">Acerca de</a></li>
-                <li class="nav-item px-lg-4 {{request()->routeIs('products') ? 'active' : ''}}"><a class="nav-link text-uppercase" href="{{route('products')}}">Productos</a></li>
+                <li class="nav-item px-lg-4 {{request()->routeIs('content.products') || request()->routeIs('content.product') ? 'active' : ''}}"><a class="nav-link text-uppercase" href="{{route('content.products')}}">Productos</a></li>
                 <li class="nav-item px-lg-4 {{request()->routeIs('store') ? 'active' : ''}}"><a class="nav-link text-uppercase" href="{{route('store')}}">Tienda</a></li>
             </ul>
         </div>

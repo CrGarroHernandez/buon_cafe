@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ProductController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +22,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'content.home')->name('home');
 Route::view('/about', 'content.about')->name('about');
-Route::view('/products', 'content.products')->name('products');
-Route::view('/product/1', 'content.product')->name('product');
+// Route::view('/products', 'content.products')->name('products');
+Route::get('/products', [ProductController::class, 'index'])->name('content.products');
+Route::get('/product/{id}', [ProductController::class, 'show'])->name('content.product');
+
+// Route::controller(ProductController::class)->group(function() {
+//     Route::get('products', 'index')->name('content.products');
+//     Route::put('product/{id}', 'show')->name('content.product');
+// })->name('pro');
+
+// Route::view('/product/1', 'content.product')->name('product');
 Route::view('/store', 'content.store')->name('store');
