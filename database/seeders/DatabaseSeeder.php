@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder
             'title'             => 'Lucaffe Classic',
             'short_description' => 'Café Molido 250 Gr',
             'description'       => 'Café en grano molido Lucaffe 250gr. Tarro. Café Lucaffe Molido 80% Arabica 20% Robusta. Mezcla clásica para quien ama el expresso con sus mejores características. Sabor dulce, cuerpo generoso y suave, crema de una densidad media, aroma excelente. Después de tomarlo, además de sentirse mejor, tendrás la satisfacción de haber bebido un café de alta calidad. Ideal para uso domestico y en cafeterías gourmet.',
-            'price'             => '13.900',
+            'price'             => '13900',
             'offer_price'       => '10900',
             'created_at'        => Carbon::now()
         ],
