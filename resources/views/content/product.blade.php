@@ -12,13 +12,13 @@
                         <div id="carouselExample" class="carousel slide">
                             <div class="carousel-inner">
                               <div class="carousel-item active">
-                                <img src="{{asset('img/480-1.webp')}}" class="d-block w-100" alt="...">
+                                <img src="{{asset('img/'.$product->title.'/480.webp')}}" class="d-block w-100" alt="...">
                               </div>
                               <div class="carousel-item">
-                                <img src="{{asset('img/buon.png')}}" class="d-block w-100" alt="...">
+                                <img src="{{asset('img/'.$product->title.'/480.webp')}}" class="d-block w-100" alt="...">
                               </div>
                               <div class="carousel-item">
-                                <img src="{{asset('img/480.webp')}}" class="d-block w-100" alt="...">
+                                <img src="{{asset('img/'.$product->title.'/480.webp')}}" class="d-block w-100" alt="...">
                               </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -33,19 +33,19 @@
                     </div>
 
 
-
-
                     <div class="col-md-6 intro-text left-0 text-center bg-faded p-5">
                         <div class="small mb-1">SKU: BST-498</div>
-                        <h1 class="display-5 fw-bolder">Lucaffe Mr Exclusive</h1>
+                        <h1 class="display-5 fw-bolder">{{$product->title}}</h1>
                         <div class="fs-5 mb-5">
-                            <span class="text-decoration-line-through">$19.990</span>
-                            <span>$14.990</span>
+                            <span class="text-decoration-line-through">${{number_format($product->price, 0, ',', '.')}}</span>
+                            <span>${{number_format($product->offer_price, 0, ',', '.')}}</span>
                         </div>
                         <p><strong>Descripción</strong>
-                            Café en grano molido Lucaffe 250gr. Tarro Mr. Exlusive <br><br>
+                            {{-- Café en grano molido Lucaffe 250gr. Tarro Mr. Exlusive <br><br> --}}
+
+                        {{$product->description}}
                             
-                           <strong> Mezcla de café</strong> Arábica de América del Sur, Asia y un porcentaje muy pequeño de África central. Es probable que ninguna Arábica por sí solo puede dar los mismos resultados.Cuerpo medio, sabor dulce, muy agradable aroma que a veces puede recordar  pan recién horneado. Cuando se acaba de conectar a tierra el olor es embriagador. El café molido se suministra en las latas clásicos a presión en una atmósfera modificada. Estos son especialmente recomendados para uso doméstico. La molienda es una fase delicada, y de gran importancia para el resultado final. Moler el café con las mejores máquinarias disponibles en el mundo. Se muele el café en ausencia de oxígeno y en la baja temperatura, con suavidad y delicadeza. Mezcla: 100% Arabica</p>
+                           {{-- <strong> Mezcla de café</strong> Arábica de América del Sur, Asia y un porcentaje muy pequeño de África central. Es probable que ninguna Arábica por sí solo puede dar los mismos resultados.Cuerpo medio, sabor dulce, muy agradable aroma que a veces puede recordar  pan recién horneado. Cuando se acaba de conectar a tierra el olor es embriagador. El café molido se suministra en las latas clásicos a presión en una atmósfera modificada. Estos son especialmente recomendados para uso doméstico. La molienda es una fase delicada, y de gran importancia para el resultado final. Moler el café con las mejores máquinarias disponibles en el mundo. Se muele el café en ausencia de oxígeno y en la baja temperatura, con suavidad y delicadeza. Mezcla: 100% Arabica</p> --}}
                         {{-- <div class="d-flex">
                             <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
                             <button class="btn btn-outline-dark flex-shrink-0" type="button">
